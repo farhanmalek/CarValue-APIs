@@ -19,6 +19,7 @@ riskRouter.post("/riskrating", (req: Request, res: Response) => {
     let riskRating = 0;
 
     // Iterate through each keyword and each word in the claim history
+    
     // Vatthana - Will this handle the case where you got for example 3x times the same word ? like " crash, crash, crash ? As it should only be equal to risk = 1 
     keyWords.forEach((word) => {
         ClaimHistoryArray.forEach((claimWord) => {
