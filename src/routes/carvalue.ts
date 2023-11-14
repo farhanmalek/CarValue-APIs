@@ -10,7 +10,7 @@ interface Car {
 valueRouter.post("/carvalue", (req: Request, res: Response) => {
   const { model, year }: Car = req.body;
   if (!model || !year) {
-    res.status(400).json({ error: "Please input a valid model and year." });
+    res.status(400).json({ error: "Please input a model and year." });
   } else if (year < 1894) {
     res.status(400).json({ error: "Please input a valid year above 1893." });
   }
