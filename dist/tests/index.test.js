@@ -32,7 +32,7 @@ describe("Car Value API", () => {
         expect(response.body).toHaveProperty("carValue");
         expect(response.body.carValue).toEqual(3112);
     }));
-    it("should be able to handle hypens, such as P-1 2019", () => __awaiter(void 0, void 0, void 0, function* () {
+    it("should be able to handle hypens, such as P-1 2012", () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield (0, supertest_1.default)(app_1.default)
             .post("/carvalue")
             .send({ model: "P-1", year: 2012 });

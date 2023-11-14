@@ -21,7 +21,7 @@ describe("Car Value API", () => {
     expect(response.body.carValue).toEqual(3112);
   });
 
-  it("should be able to handle hypens, such as P-1 2019", async () => {
+  it("should be able to handle hypens, such as P-1 2012", async () => {
     const response = await request(app)
       .post("/carvalue")
       .send({ model: "P-1", year: 2012 });
