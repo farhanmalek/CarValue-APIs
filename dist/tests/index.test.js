@@ -159,7 +159,7 @@ describe("Premium Quote API", () => {
         });
         expect(response.status).toEqual(200);
         expect(response.body).toHaveProperty("error");
-        expect(response.body.error).toEqual("Invalid Inputs provided, ensure your inputs are numbers, both carValue and riskRating is supplied and risk rating is between 1-5");
+        expect(response.body.error).toEqual("Invalid Inputs provided. Ensure your inputs are numbers, both carValue and riskRating are supplied, and risk rating is between 1-5.");
     }));
     it("should handle an invalid risk rating", () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield (0, supertest_1.default)(app_1.default)
@@ -170,7 +170,7 @@ describe("Premium Quote API", () => {
         });
         expect(response.status).toEqual(200);
         expect(response.body).toHaveProperty("error");
-        expect(response.body.error).toEqual("Invalid Inputs provided, ensure your inputs are numbers, both carValue and riskRating is supplied and risk rating is between 1-5");
+        expect(response.body.error).toEqual("Invalid Inputs provided. Ensure your inputs are numbers, both carValue and riskRating are supplied, and risk rating is between 1-5.");
     }));
     it("should handle an invalid input types", () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield (0, supertest_1.default)(app_1.default)
@@ -181,7 +181,7 @@ describe("Premium Quote API", () => {
         });
         expect(response.status).toEqual(200);
         expect(response.body).toHaveProperty("error");
-        expect(response.body.error).toEqual("Invalid Inputs provided, ensure your inputs are numbers, both carValue and riskRating is supplied and risk rating is between 1-5");
+        expect(response.body.error).toEqual("Invalid Inputs provided. Ensure your inputs are numbers, both carValue and riskRating are supplied, and risk rating is between 1-5.");
     }));
     it("should handle an numbers that are strings", () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield (0, supertest_1.default)(app_1.default)
@@ -204,6 +204,6 @@ describe("Premium Quote API", () => {
         });
         expect(response.status).toEqual(200);
         expect(response.body).toHaveProperty("error");
-        expect(response.body.error).toEqual("Invalid Inputs provided, ensure your inputs are numbers, both carValue and riskRating is supplied and risk rating is between 1-5");
+        expect(response.body.error).toEqual("Invalid Inputs provided. Ensure your inputs are numbers, both carValue and riskRating are supplied, and risk rating is between 1-5.");
     }));
 });
