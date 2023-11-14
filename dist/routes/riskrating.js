@@ -4,17 +4,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const Typo = require("typo-js");
 const riskRouter = express_1.default.Router();
 const keyWords = ["collide", "crash", "scratch", "bump", "smash"];
+const dictionary = new Typo("en_US");
 riskRouter.post("/riskrating", (req, res) => {
     const { claimHistory } = req.body;
-    let riskRating = 0;
-    const claimHistoryArray = claimHistory
+    const ClaimHistoryArray = claimHistory
         .toLowerCase()
         .split(" ");
-    console.log(claimHistoryArray);
+    let riskRating = 0;
     keyWords.forEach((word) => {
-        claimHistoryArray.forEach((claimWord) => {
+        ClaimHistoryArray.forEach((claimWord) => {
             if (claimWord.includes(word)) {
                 riskRating++;
             }

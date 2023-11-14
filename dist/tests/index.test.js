@@ -128,7 +128,7 @@ describe("Risk Rating API", () => {
     //       .post("/riskrating")
     //       .send({
     //         claimHistory:
-    //           "My only claim was a cras into my house's garage door that left a srach on my car. There are no other colizions.",
+    //           "My only claim was a cras into my house's garage door that left a srach on my car. There are no other crashes.",
     //       });
     //     expect(response.status).toEqual(200);
     //     expect(response.body).toHaveProperty("riskRating");

@@ -9,7 +9,7 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 valueRouter.post("/carvalue", (req, res) => {
     const { model, year } = req.body;
     if (!model || !year) {
-        res.status(400).json({ error: "Please input a valid model and year." });
+        res.status(400).json({ error: "Please input a model and year." });
     }
     else if (year < 1894) {
         res.status(400).json({ error: "Please input a valid year above 1893." });
@@ -20,7 +20,6 @@ valueRouter.post("/carvalue", (req, res) => {
         .filter((letter) => {
         return letter !== " " && letter !== "-";
     });
-    console.log(wordArray);
     const convertedVal = wordArray
         .map((letter) => {
         if (alphabet.includes(letter)) {
@@ -31,7 +30,6 @@ valueRouter.post("/carvalue", (req, res) => {
         }
     })
         .reduce((a, b) => a + b, 0);
-    console.log(convertedVal);
     const carValue = (convertedVal * 100) + year;
     res.json({ carValue });
 });
