@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/f0e1b6e0-9e69-42e7-aa33-d0138752ff6a/resourceGroups/turners-car-apis-rg/providers/Microsoft.Web/sites/turners-car-apis",
+  "appService.deploySubpath": "."
+}

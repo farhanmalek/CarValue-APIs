@@ -6,7 +6,12 @@ const app: Express = express();
 
 //middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req: Request, res: Response) => {
+    res.send("Welcome to the API");
+
+}
 
 //Routes
 app.use("/", quoteRouter); //Quotes route

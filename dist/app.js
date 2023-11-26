@@ -10,7 +10,7 @@ const carvalue_1 = __importDefault(require("./routes/carvalue"));
 const app = (0, express_1.default)();
 //middleware
 app.use(express_1.default.json());
-app.use(express_1.default.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 //Routes
 app.use("/", quote_1.default); //Quotes route
 app.use("/", riskrating_1.default); //Risk Rating route
