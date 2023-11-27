@@ -1,4 +1,5 @@
 import app from "./app";
+//Require env files, test deploy
 require("dotenv").config();
 
 //----PORT----//
