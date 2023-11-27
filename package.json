@@ -9,7 +9,7 @@
     "start": "node dist/index.js",
     "predev": "npm run build",
     "dev": "concurrently \"npx tsc -w\" \"nodemon dist/index.js\"",
-    "test": "jest --verbose src/tests/index.test.ts"
+    "test": "jest --verbose --coverage src/tests/index.test.ts"
   },
   "keywords": [],
   "author": "",
