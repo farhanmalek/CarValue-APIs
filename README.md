@@ -20,6 +20,7 @@ This API takes car value and driver risk rating as input, providing a quote for 
 - Jest
 - Supertest
 - Express and Node JS
+- CI/CD, this project was deployed using Github Actions on Azure
 
 ###### Usage
 1. Clone the repository.
